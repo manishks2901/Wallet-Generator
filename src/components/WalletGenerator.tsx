@@ -125,33 +125,65 @@ const WalletGenerator = () => {
           {keypair && keypair.length > 0
             ? keypair.map((key, idx) => (
                 <div key={idx} className="">
-                  <Card className="bg-white/10 backdrop-blur-md border border-blue-400/30 shadow-lg rounded-xl">
+                    <Card className="bg-white/10 backdrop-blur-md border border-blue-400/30 shadow-lg rounded-xl">
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-lg text-blue-100 font-bold">
-                        Wallet {idx + 1}
+                      <CardTitle className="text-lg text-gray-900 font-bold">
+                      Wallet {idx + 1}
                       </CardTitle>
-                      <CardDescription className="text-blue-200">
-                        <span className="font-semibold">Public Key:</span>
-                        <span className="ml-2 font-mono break-all text-blue-300">
-                          {key.publicKey.toBase58()}
+                      <CardDescription className="text-gray-800 flex flex-col gap-1">
+                      <span className="font-semibold">Public Key:</span>
+                      <div className="flex items-center gap-2">
+                        <span className="font-mono break-all text-gray-700 text-xs md:text-sm select-all">
+                        {key.publicKey.toBase58()}
                         </span>
+                        <Button
+                        size="icon"
+                        variant="ghost"
+                        className="p-1 text-gray-700 hover:bg-blue-500/20"
+                        onClick={() => {
+                          navigator.clipboard.writeText(key.publicKey.toBase58());
+                          toast("Public key copied!");
+                        }}
+                        >
+                        <svg width="16" height="16" fill="none" viewBox="0 0 16 16">
+                          <rect x="4" y="4" width="8" height="8" rx="2" stroke="currentColor" strokeWidth="1.2"/>
+                          <rect x="2.5" y="2.5" width="8" height="8" rx="2" stroke="currentColor" strokeWidth="1.2" opacity="0.5"/>
+                        </svg>
+                        </Button>
+                      </div>
                       </CardDescription>
                       <CardAction>
-                        <Button
-                          onClick={() => HandleDeleteWallet(idx)}
-                          className="bg-red-600/80 hover:bg-red-800 text-white ml-2"
-                          size="icon"
-                        >
-                          <Trash2 className="" />
-                        </Button>
+                      <Button
+                        onClick={() => HandleDeleteWallet(idx)}
+                        className="bg-red-600/80 hover:bg-red-800 text-white ml-2"
+                        size="icon"
+                      >
+                        <Trash2 />
+                      </Button>
                       </CardAction>
                     </CardHeader>
-                    <CardFooter className="pt-0">
-                      <p className="text-xs text-blue-300 break-all font-mono">
+                    <CardFooter className="pt-0 flex flex-col gap-1">
+                      <div className="flex items-center gap-2">
+                      <span className="text-xs text-gray-700 break-all font-mono select-all">
                         Private Key: {bs58.encode(key.secretKey)}
-                      </p>
+                      </span>
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        className="p-1 text-gray-700 hover:bg-blue-500/20"
+                        onClick={() => {
+                        navigator.clipboard.writeText(bs58.encode(key.secretKey));
+                        toast("Private key copied!");
+                        }}
+                      >
+                        <svg width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <rect x="4" y="4" width="8" height="8" rx="2" stroke="currentColor" strokeWidth="1.2"/>
+                        <rect x="2.5" y="2.5" width="8" height="8" rx="2" stroke="currentColor" strokeWidth="1.2" opacity="0.5"/>
+                        </svg>
+                      </Button>
+                      </div>
                     </CardFooter>
-                  </Card>
+                    </Card>
                 </div>
               ))
             : null}
