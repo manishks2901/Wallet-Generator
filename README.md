@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Futuristic Web3 Wallet Generator
+
+A modern, glassmorphic, and vibrant web application for generating secure, non-custodial wallets. Built with Next.js, Ethers.js, Solana Web3.js, and more.
+
+## Features
+
+- Instantly generate a secure wallet (Solana, Ethereum coming soon)
+- Glassmorphic, futuristic UI
+- Copy and manage your mnemonic/seed phrase
+- Generate and manage multiple wallets
+- Powered by Next.js, bip39, Solana Web3.js, and the latest web3 tech
 
 ## Getting Started
 
@@ -14,23 +24,28 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/` - Next.js app directory
+- `src/components/` - UI and wallet components
+- `src/lib/` - Utility functions
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js
+- React
+- Tailwind CSS
+- bip39
+- Solana Web3.js
+- Ethers.js (for Ethereum support)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Security Notice
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- This project is for educational/demo purposes. Do not use generated wallets for storing real funds.
+- Always keep your mnemonic/seed phrase secure and private.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
