@@ -51,7 +51,7 @@ const Blockchain = () => {
               className="w-full mt-2 bg-gradient-to-r from-purple-500 to-blue-700 hover:from-purple-600 hover:to-blue-800 text-white font-bold py-2 px-6 rounded-lg shadow transition-all duration-200 border-none"
               disabled={!mnemonic}
               onClick={() => {
-                // Placeholder for wallet generation logic
+
                 router.push(`${window.location.pathname}/walletgenerator`)
               }}
             >

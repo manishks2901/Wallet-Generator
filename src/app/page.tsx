@@ -31,20 +31,13 @@ export default function Home() {
           </button>
           <button
         className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white font-bold py-2 px-6 rounded-lg shadow transition-all duration-200"
-        // onClick={() => handleGenerateWallet('solana')}
+        // TODO:add login for etherium
           >
         Etherium
           </button>
         </div>
       </div>
-      {/* 
-        Display wallet address, mnemonic, QR code, etc. here after generation.
-        Example:
-        <div className="mt-6 w-full">
-        <label className="block text-blue-100 mb-2">Wallet Address</label>
-        <div className="bg-gray-800 text-blue-200 rounded-lg px-4 py-2 break-all font-mono">0x...</div>
-        </div>
-      */}
+      
       <div className="mt-8 text-xs text-blue-300 text-center">
         Powered by Next.js, Ethers.js, and the future of decentralized tech.
       </div>

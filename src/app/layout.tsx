@@ -40,6 +40,9 @@ export default function RootLayout({
           <Toaster />
         </ThemeProvider>
       </body>
+      <footer className="w-full text-center py-4 text-xs text-blue-300 bg-transparent">
+        Developed by manishkumarsharma
+      </footer>
     </html>
   );
 }
