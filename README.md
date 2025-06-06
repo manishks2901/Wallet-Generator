@@ -1,14 +1,14 @@
 # Futuristic Web3 Wallet Generator
 
-A modern, glassmorphic, and vibrant web application for generating secure, non-custodial wallets. Built with Next.js, Ethers.js, Solana Web3.js, and more.
+A modern, glassmorphic, and vibrant web application for generating secure, non-custodial wallets. Built with Next.js, Solana Web3.js, and more.
 
 ## Features
 
-- Instantly generate a secure wallet (Solana, Ethereum coming soon)
-- Glassmorphic, futuristic UI
-- Copy and manage your mnemonic/seed phrase
-- Generate and manage multiple wallets
-- Powered by Next.js, bip39, Solana Web3.js, and the latest web3 tech
+- **Wallet Generator for Solana**: Instantly generate a secure, non-custodial Solana wallet. Your keys, your crypto, your future.
+- **Airdrop for Solana**: Request SOL airdrops directly to your wallet for testing and development on Solana Devnet.
+- **Sign Message for Solana**: Sign messages with your Solana wallet to prove ownership or interact with dApps securely.
+
+Looking forward to supporting Ethereum and other blockchains soon!
 
 ## Getting Started
 
@@ -37,9 +37,9 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser.
 - Next.js
 - React
 - Tailwind CSS
-- bip39
 - Solana Web3.js
-- Ethers.js (for Ethereum support)
+- @solana/wallet-adapter
+- bip39
 
 ## Security Notice
 
